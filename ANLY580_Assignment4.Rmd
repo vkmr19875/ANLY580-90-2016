@@ -117,6 +117,16 @@ This is the example to use ggplot2, which is one decent tool in R to visualize t
    theme_bw() 
 ```
 ## Vishwanath Kuma	Maharajapuram Ramachandran
+This is a scatter plot that represents the disitribution of diamonds based on the price and carat.
+```{r echo=TRUE}
+library(ggplot2)#Load Library
+data("diamonds")#Load Dataset
+sam <- diamonds[sample(nrow(diamonds), 100), ] #restricting the sample size of the data
+
+qplot(carat, price, #Specifying the two columns
+      data = sam, #Specifying the dataset with sample size
+      colour = color) #Specifying the colour scheme
+```
 ## Jai	Rajora
 ## Yuanhui	Sui
 ## Shanfeng	Tang
